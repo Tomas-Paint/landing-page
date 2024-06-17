@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,30 +8,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(76, 76, 77);
+  background: linear-gradient(to bottom, rgb(44, 44, 44), rgb(20, 20, 20));
 }
-header .logo {
-  width: 110px;
+.logo {
+  width: 80px;
 }
 header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 200px;
+  gap: 120px;
   margin-right: 30px;
 }
 nav ul {
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 nav a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  font-size: 14px;
   font-weight: 800;
 }
-nav .logo-carrito {
-  margin-right: 70px;
-}
+
 body {
   background-color: rgb(20, 20, 20);
 }
@@ -40,7 +42,7 @@ main {
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: lato;
   gap: 70px;
 }
 #hero {
@@ -49,7 +51,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 100px 0;
-  gap: 30px;
+  gap: 300px;
 }
 .hero-img img {
   width: 200px;
@@ -59,50 +61,151 @@ main {
 .hero-info {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 10px;
 }
 .hero-info h1 {
   font-size: 2.5rem;
 }
-.hero-info a {
+.call {
   background-color: rgb(76, 76, 77);
   text-decoration: none;
   color: white;
-  width: 45%;
   padding: 10px 10px;
   border-radius: 15px;
   border: solid 2px rgb(76, 76, 77);
 }
 .learn {
-  position: relative;
-  top: 60px;
-  right: 200px;
   text-decoration: none;
   color: white;
   padding: 10px 10px;
   border-radius: 15px;
-  border: solid 2px rgb(76, 76, 77);
+  border: solid 2px rgb(154, 154, 155);
 }
 .text-info {
   max-width: 1200px;
   text-align: center;
-  padding: 35px 0 70px 0;
+  padding: 70px 0 70px 0;
 }
 footer {
-  height: 150px;
-  background-color: rgb(76, 76, 77);
+  height: 100px;
+  background: linear-gradient(to top, rgb(44, 44, 44), rgb(20, 20, 20));
   color: white;
+  font-family: lato;
 }
 footer span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hero-info a:hover {
+.call:hover {
   background-color: rgb(20, 20, 20);
   transition: 1.5s;
 }
 .learn:hover {
   background-color: rgb(76, 76, 77);
   transition: 1.5s;
+}
+
+#menu-t,
+.menu-label {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header nav {
+    gap: 30px;
+  }
+  header ul {
+    position: absolute;
+    top: 70px;
+    left: 5%;
+    right: 5%;
+    padding: 25px 0;
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+    background-color: rgb(20, 20, 20);
+    border: solid 3px rgb(76, 76, 77);
+    border-top: 0;
+    border-radius: 0 0 15px 15px;
+    display: none;
+  }
+  header ul a {
+    color: rgb(110, 107, 107);
+    font-weight: 800;
+  }
+  .menu-label {
+    display: flex;
+    order: 2;
+  }
+  .menu-edit {
+    width: 25px;
+    height: 20px;
+  }
+
+  #menu-t:checked + .list {
+    display: flex;
+  }
+
+  .hero-img {
+    display: none;
+  }
+  #hero {
+    margin: 0 auto;
+  }
+  .hero-info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-info {
+    width: 700px;
+  }
+}
+@media (max-width: 700px) {
+  .hero-info {
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-info h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .learn {
+    width: 85%;
+  }
+  .text-info {
+    width: 500px;
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .hero-info h1 {
+    font-size: 2.7rem;
+  }
+  .hero-info h2 {
+    font-size: 1.2rem;
+  }
+  .hero-buttons {
+    width: 40%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .hero-info {
+    gap: 50px;
+  }
+  .text-info {
+    width: 400px;
+  }
 }
