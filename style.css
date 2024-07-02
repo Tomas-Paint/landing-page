@@ -42,7 +42,7 @@ main {
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: lato;
+  font-family: "lato";
   gap: 70px;
 }
 #hero {
@@ -90,11 +90,67 @@ main {
   text-align: center;
   padding: 70px 0 70px 0;
 }
+#container-me {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.tittle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.card-container {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.card-container img {
+  width: 40px;
+}
+.time-work,
+.idea-work,
+.supp-work {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#contact-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+.info-contact-me {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+.text-info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info-contact-me img {
+  width: 200px;
+}
+
 footer {
   height: 100px;
   background: linear-gradient(to top, rgb(44, 44, 44), rgb(20, 20, 20));
   color: white;
-  font-family: lato;
+  font-family: "lato";
 }
 footer span {
   display: flex;
